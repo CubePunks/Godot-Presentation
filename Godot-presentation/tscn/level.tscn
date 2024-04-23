@@ -1,0 +1,363 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkejdu05whq51"]
+
+[ext_resource type="PackedScene" uid="uid://nmovuf2pnxrb" path="res://tscn/player.tscn" id="2_0u3u1"]
+[ext_resource type="PackedScene" uid="uid://eimutum8fyhl" path="res://tscn/plat.tscn" id="3_5g1d6"]
+
+[sub_resource type="Gradient" id="Gradient_vmwg5"]
+colors = PackedColorArray(0.677802, 0.472225, 0.889386, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uyd5y"]
+gradient = SubResource("Gradient_vmwg5")
+width = 10
+height = 200
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_mhb0o"]
+offsets = PackedFloat32Array(0, 0.136364, 0.272727, 0.415584, 0.551948, 0.675325, 0.811688, 0.935065)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2llq"]
+gradient = SubResource("Gradient_mhb0o")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+
+[node name="level" type="Node2D"]
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="sky" type="ParallaxBackground" parent="bg"]
+
+[node name="sky" type="TextureRect" parent="bg/sky"]
+editor_description = "rather than using an image texture - having the engine draw gradient textures saves you on file space and provides a high level of detail.
+"
+offset_left = -70.0
+offset_right = 1917.0
+offset_bottom = 1084.0
+texture = SubResource("GradientTexture2D_uyd5y")
+expand_mode = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="bg"]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="bg/ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.45, 0.45)
+
+[node name="ColorRect" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = -84.0
+offset_top = 265.0
+offset_right = -45.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 4.0
+offset_top = 312.0
+offset_right = 43.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 92.0
+offset_top = 287.0
+offset_right = 131.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 180.0
+offset_top = 265.0
+offset_right = 219.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 268.0
+offset_top = 312.0
+offset_right = 307.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 356.0
+offset_top = 287.0
+offset_right = 395.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 444.0
+offset_top = 265.0
+offset_right = 483.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 532.0
+offset_top = 312.0
+offset_right = 571.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 620.0
+offset_top = 287.0
+offset_right = 659.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 740.0
+offset_top = 265.0
+offset_right = 779.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 828.0
+offset_top = 312.0
+offset_right = 867.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = 916.0
+offset_top = 287.0
+offset_right = 955.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+offset_left = -85.0
+offset_top = 348.0
+offset_right = 1246.0
+offset_bottom = 494.0
+color = Color(0, 0, 0, 1)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="bg/ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.58, 0.58)
+
+[node name="ColorRect" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = -84.0
+offset_top = 345.0
+offset_right = -45.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 4.0
+offset_top = 392.0
+offset_right = 43.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 92.0
+offset_top = 367.0
+offset_right = 131.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 180.0
+offset_top = 345.0
+offset_right = 219.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 268.0
+offset_top = 392.0
+offset_right = 307.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 356.0
+offset_top = 367.0
+offset_right = 395.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 444.0
+offset_top = 345.0
+offset_right = 483.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 532.0
+offset_top = 392.0
+offset_right = 571.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 620.0
+offset_top = 367.0
+offset_right = 659.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 740.0
+offset_top = 345.0
+offset_right = 779.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 828.0
+offset_top = 392.0
+offset_right = 867.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = 916.0
+offset_top = 367.0
+offset_right = 955.0
+offset_bottom = 464.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+offset_left = -85.0
+offset_top = 428.0
+offset_right = 1246.0
+offset_bottom = 574.0
+color = Color(0.268163, 0.288524, 0.423409, 1)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="bg/ParallaxBackground"]
+motion_scale = Vector2(0.795, 0.795)
+
+[node name="ColorRect" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = -84.0
+offset_top = 465.0
+offset_right = -45.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 4.0
+offset_top = 512.0
+offset_right = 43.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 92.0
+offset_top = 487.0
+offset_right = 131.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 180.0
+offset_top = 465.0
+offset_right = 219.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 268.0
+offset_top = 512.0
+offset_right = 307.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 356.0
+offset_top = 487.0
+offset_right = 395.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 444.0
+offset_top = 465.0
+offset_right = 483.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 532.0
+offset_top = 512.0
+offset_right = 571.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 620.0
+offset_top = 487.0
+offset_right = 659.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 740.0
+offset_top = 465.0
+offset_right = 779.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 828.0
+offset_top = 512.0
+offset_right = 867.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = 916.0
+offset_top = 487.0
+offset_right = 955.0
+offset_bottom = 584.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+offset_left = -85.0
+offset_top = 548.0
+offset_right = 1246.0
+offset_bottom = 694.0
+color = Color(0.1288, 0.15652, 0.28, 1)
+
+[node name="platforms" type="Node2D" parent="."]
+modulate = Color(0.675, 0.35, 1, 1)
+
+[node name="plat4" parent="platforms" instance=ExtResource("3_5g1d6")]
+position = Vector2(580, 557)
+scale = Vector2(2, 3.615)
+
+[node name="plat3" parent="platforms" instance=ExtResource("3_5g1d6")]
+position = Vector2(542, 631)
+scale = Vector2(5.835, 3.88)
+
+[node name="plat2" parent="platforms" instance=ExtResource("3_5g1d6")]
+position = Vector2(497, 688)
+scale = Vector2(10.4, 2.515)
+
+[node name="floor" parent="platforms" instance=ExtResource("3_5g1d6")]
+position = Vector2(360, 723)
+scale = Vector2(37.33, 2.6)
+
+[node name="TextureRect2" type="TextureRect" parent="platforms/floor"]
+modulate = Color(1, 1, 1, 0.27451)
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+texture = SubResource("GradientTexture2D_w2llq")
+expand_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("2_0u3u1")]
+position = Vector2(336, 680)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(5, 5)
+limit_left = -100
+limit_right = 800
+limit_bottom = 720
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
