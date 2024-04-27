@@ -1,6 +1,6 @@
 extends Node
 
+@onready var level = load("res://tscn/level.tscn")
 
-# list of variables that preload level rooms
 func _ready():
-	pass 
+	get_parent().get_node("SubViewportContainer/SubViewport").add_child(level.instantiate()) 

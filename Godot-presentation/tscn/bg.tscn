@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8o81qgm52f8t"]
+
+[ext_resource type="Texture2D" uid="uid://b14718dqapuef" path="res://assets/city buildings.png" id="1_hac4j"]
+[ext_resource type="Texture2D" uid="uid://dl61lx4di86dj" path="res://assets/city buildings2.png" id="2_kxleb"]
+[ext_resource type="Texture2D" uid="uid://bom1pai6nhbbj" path="res://assets/city buildings3.png" id="3_i7f8t"]
+
+[sub_resource type="Gradient" id="Gradient_vmwg5"]
+colors = PackedColorArray(1, 1, 1, 1, 0.29, 0.633167, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uyd5y"]
+gradient = SubResource("Gradient_vmwg5")
+width = 10
+height = 200
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[node name="bg" type="Node2D"]
+
+[node name="sky" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="TextureRect" parent="sky"]
+editor_description = "rather than using an image texture - having the engine draw gradient textures saves you on file space and provides a high level of detail.
+"
+offset_left = -70.0
+offset_right = 1917.0
+offset_bottom = 1512.0
+texture = SubResource("GradientTexture2D_uyd5y")
+expand_mode = 1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2(0.715, 0.715)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.45, 0.45)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -189.0
+offset_top = 256.0
+offset_right = 2240.0
+offset_bottom = 493.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hac4j")
+stretch_mode = 1
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(1, 0)
+motion_scale = Vector2(0.58, 0.58)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color(0.351563, 0.351563, 0.351563, 1)
+offset_left = -190.0
+offset_top = 288.0
+offset_right = 2239.0
+offset_bottom = 559.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kxleb")
+stretch_mode = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.795, 0.795)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.552956, 0.552956, 0.552956, 1)
+offset_left = -190.0
+offset_top = 352.0
+offset_right = 2239.0
+offset_bottom = 708.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_i7f8t")
+stretch_mode = 1
+
+[node name="haze" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="TextureRect" parent="haze"]
+editor_description = "rather than using an image texture - having the engine draw gradient textures saves you on file space and provides a high level of detail.
+"
+modulate = Color(1, 1, 1, 0.564706)
+offset_left = -70.0
+offset_right = 1917.0
+offset_bottom = 1512.0
+texture = SubResource("GradientTexture2D_uyd5y")
+expand_mode = 1

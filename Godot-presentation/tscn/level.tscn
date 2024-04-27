@@ -1,20 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkejdu05whq51"]
+[gd_scene load_steps=6 format=3 uid="uid://dkejdu05whq51"]
 
-[ext_resource type="Texture2D" uid="uid://b14718dqapuef" path="res://assets/city buildings.png" id="1_krilu"]
+[ext_resource type="PackedScene" uid="uid://b8o81qgm52f8t" path="res://tscn/bg.tscn" id="1_vrmo1"]
 [ext_resource type="PackedScene" uid="uid://nmovuf2pnxrb" path="res://tscn/player.tscn" id="2_0u3u1"]
-[ext_resource type="Texture2D" uid="uid://dl61lx4di86dj" path="res://assets/city buildings2.png" id="2_yficm"]
 [ext_resource type="PackedScene" uid="uid://eimutum8fyhl" path="res://tscn/plat.tscn" id="3_5g1d6"]
-[ext_resource type="Texture2D" uid="uid://bom1pai6nhbbj" path="res://assets/city buildings3.png" id="3_65swv"]
-
-[sub_resource type="Gradient" id="Gradient_vmwg5"]
-colors = PackedColorArray(0.85, 0.102, 0.102, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uyd5y"]
-gradient = SubResource("Gradient_vmwg5")
-width = 10
-height = 200
-fill_from = Vector2(0, 1)
-fill_to = Vector2(0, 0)
 
 [sub_resource type="Gradient" id="Gradient_mhb0o"]
 offsets = PackedFloat32Array(0, 0.136364, 0.272727, 0.415584, 0.551948, 0.675325, 0.811688, 0.935065)
@@ -27,65 +15,10 @@ fill_to = Vector2(0, 0)
 
 [node name="level" type="Node2D"]
 
-[node name="bg" type="Node2D" parent="."]
-
-[node name="sky" type="ParallaxBackground" parent="bg"]
-
-[node name="sky" type="TextureRect" parent="bg/sky"]
-editor_description = "rather than using an image texture - having the engine draw gradient textures saves you on file space and provides a high level of detail.
-"
-offset_left = -70.0
-offset_right = 1917.0
-offset_bottom = 1240.0
-texture = SubResource("GradientTexture2D_uyd5y")
-expand_mode = 1
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="bg"]
-scroll_base_scale = Vector2(0.715, 0.715)
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="bg/ParallaxBackground"]
-position = Vector2(1, 0)
-motion_scale = Vector2(0.45, 0.45)
-
-[node name="TextureRect" type="TextureRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-modulate = Color(0, 0, 0, 1)
-offset_left = -189.0
-offset_top = 256.0
-offset_right = 2240.0
-offset_bottom = 493.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_krilu")
-stretch_mode = 1
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="bg/ParallaxBackground"]
-position = Vector2(1, 0)
-motion_scale = Vector2(0.58, 0.58)
-
-[node name="TextureRect" type="TextureRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-modulate = Color(0.351563, 0.351563, 0.351563, 1)
-offset_left = -190.0
-offset_top = 288.0
-offset_right = 2239.0
-offset_bottom = 559.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_yficm")
-stretch_mode = 1
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="bg/ParallaxBackground"]
-motion_scale = Vector2(0.795, 0.795)
-
-[node name="TextureRect" type="TextureRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-modulate = Color(0.552956, 0.552956, 0.552956, 1)
-offset_left = -190.0
-offset_top = 352.0
-offset_right = 2239.0
-offset_bottom = 708.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_65swv")
-stretch_mode = 1
+[node name="bg" parent="." instance=ExtResource("1_vrmo1")]
 
 [node name="platforms" type="Node2D" parent="."]
-modulate = Color(0.637068, 0.492664, 0.662338, 1)
+modulate = Color(0.41, 1, 0.596833, 1)
 position = Vector2(-1, 0)
 
 [node name="plat4" parent="platforms" instance=ExtResource("3_5g1d6")]
