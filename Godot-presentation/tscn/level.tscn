@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkejdu05whq51"]
+[gd_scene load_steps=10 format=3 uid="uid://dkejdu05whq51"]
 
+[ext_resource type="Texture2D" uid="uid://b14718dqapuef" path="res://assets/city buildings.png" id="1_krilu"]
 [ext_resource type="PackedScene" uid="uid://nmovuf2pnxrb" path="res://tscn/player.tscn" id="2_0u3u1"]
+[ext_resource type="Texture2D" uid="uid://dl61lx4di86dj" path="res://assets/city buildings2.png" id="2_yficm"]
 [ext_resource type="PackedScene" uid="uid://eimutum8fyhl" path="res://tscn/plat.tscn" id="3_5g1d6"]
+[ext_resource type="Texture2D" uid="uid://bom1pai6nhbbj" path="res://assets/city buildings3.png" id="3_65swv"]
 
 [sub_resource type="Gradient" id="Gradient_vmwg5"]
-colors = PackedColorArray(0.677802, 0.472225, 0.889386, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0.85, 0.102, 0.102, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_uyd5y"]
 gradient = SubResource("Gradient_vmwg5")
@@ -33,298 +36,57 @@ editor_description = "rather than using an image texture - having the engine dra
 "
 offset_left = -70.0
 offset_right = 1917.0
-offset_bottom = 1084.0
+offset_bottom = 1240.0
 texture = SubResource("GradientTexture2D_uyd5y")
 expand_mode = 1
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="bg"]
+scroll_base_scale = Vector2(0.715, 0.715)
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="bg/ParallaxBackground"]
 position = Vector2(1, 0)
 motion_scale = Vector2(0.45, 0.45)
 
-[node name="ColorRect" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = -84.0
-offset_top = 265.0
-offset_right = -45.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 4.0
-offset_top = 312.0
-offset_right = 43.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 92.0
-offset_top = 287.0
-offset_right = 131.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 180.0
-offset_top = 265.0
-offset_right = 219.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 268.0
-offset_top = 312.0
-offset_right = 307.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 356.0
-offset_top = 287.0
-offset_right = 395.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 444.0
-offset_top = 265.0
-offset_right = 483.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 532.0
-offset_top = 312.0
-offset_right = 571.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect10" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 620.0
-offset_top = 287.0
-offset_right = 659.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect11" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 740.0
-offset_top = 265.0
-offset_right = 779.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect12" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 828.0
-offset_top = 312.0
-offset_right = 867.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect13" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = 916.0
-offset_top = 287.0
-offset_right = 955.0
-offset_bottom = 384.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
-offset_left = -85.0
-offset_top = 348.0
-offset_right = 1246.0
-offset_bottom = 494.0
-color = Color(0, 0, 0, 1)
+[node name="TextureRect" type="TextureRect" parent="bg/ParallaxBackground/ParallaxLayer3"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -189.0
+offset_top = 256.0
+offset_right = 2240.0
+offset_bottom = 493.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_krilu")
+stretch_mode = 1
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="bg/ParallaxBackground"]
 position = Vector2(1, 0)
 motion_scale = Vector2(0.58, 0.58)
 
-[node name="ColorRect" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = -84.0
-offset_top = 345.0
-offset_right = -45.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 4.0
-offset_top = 392.0
-offset_right = 43.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 92.0
-offset_top = 367.0
-offset_right = 131.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 180.0
-offset_top = 345.0
-offset_right = 219.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 268.0
-offset_top = 392.0
-offset_right = 307.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 356.0
-offset_top = 367.0
-offset_right = 395.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 444.0
-offset_top = 345.0
-offset_right = 483.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 532.0
-offset_top = 392.0
-offset_right = 571.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect10" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 620.0
-offset_top = 367.0
-offset_right = 659.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect11" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 740.0
-offset_top = 345.0
-offset_right = 779.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect12" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 828.0
-offset_top = 392.0
-offset_right = 867.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect13" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = 916.0
-offset_top = 367.0
-offset_right = 955.0
-offset_bottom = 464.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
-offset_left = -85.0
-offset_top = 428.0
-offset_right = 1246.0
-offset_bottom = 574.0
-color = Color(0.268163, 0.288524, 0.423409, 1)
+[node name="TextureRect" type="TextureRect" parent="bg/ParallaxBackground/ParallaxLayer2"]
+modulate = Color(0.351563, 0.351563, 0.351563, 1)
+offset_left = -190.0
+offset_top = 288.0
+offset_right = 2239.0
+offset_bottom = 559.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yficm")
+stretch_mode = 1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="bg/ParallaxBackground"]
 motion_scale = Vector2(0.795, 0.795)
 
-[node name="ColorRect" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = -84.0
-offset_top = 465.0
-offset_right = -45.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 4.0
-offset_top = 512.0
-offset_right = 43.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 92.0
-offset_top = 487.0
-offset_right = 131.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 180.0
-offset_top = 465.0
-offset_right = 219.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 268.0
-offset_top = 512.0
-offset_right = 307.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 356.0
-offset_top = 487.0
-offset_right = 395.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 444.0
-offset_top = 465.0
-offset_right = 483.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 532.0
-offset_top = 512.0
-offset_right = 571.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect10" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 620.0
-offset_top = 487.0
-offset_right = 659.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect11" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 740.0
-offset_top = 465.0
-offset_right = 779.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect12" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 828.0
-offset_top = 512.0
-offset_right = 867.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect13" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = 916.0
-offset_top = 487.0
-offset_right = 955.0
-offset_bottom = 584.0
-color = Color(0.1288, 0.15652, 0.28, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="bg/ParallaxBackground/ParallaxLayer"]
-offset_left = -85.0
-offset_top = 548.0
-offset_right = 1246.0
-offset_bottom = 694.0
-color = Color(0.1288, 0.15652, 0.28, 1)
+[node name="TextureRect" type="TextureRect" parent="bg/ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.552956, 0.552956, 0.552956, 1)
+offset_left = -190.0
+offset_top = 352.0
+offset_right = 2239.0
+offset_bottom = 708.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_65swv")
+stretch_mode = 1
 
 [node name="platforms" type="Node2D" parent="."]
-modulate = Color(0.675, 0.35, 1, 1)
+modulate = Color(0.637068, 0.492664, 0.662338, 1)
+position = Vector2(-1, 0)
 
 [node name="plat4" parent="platforms" instance=ExtResource("3_5g1d6")]
 position = Vector2(580, 557)
